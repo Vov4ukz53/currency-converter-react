@@ -1,0 +1,20 @@
+.header {
+    background-color: #105a23;
+    color: #fff;
+}
+
+.header__title {
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+@media (max-width: 767px) {
+    .header {
+        border-radius: none;
+    }
+    .header__title {
+        font-size: 24px;
+        padding: 10px 0;
+    }
+}

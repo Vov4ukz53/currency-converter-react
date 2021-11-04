@@ -1,11 +1,11 @@
-
+import Header from "./Header";
 
 function App() {
   return (
     <div className="App">
-      <header className="header">
-        <h1 className="header__title">Kalkulator walutowy</h1>
-      </header>
+      <Header
+        title="Kalkulator walutowy"
+      />
       <main className="page">
         <section className="calculator">
           <div className="container">
