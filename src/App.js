@@ -1,4 +1,5 @@
 import Header from "./Header";
+import Footer from "./Footer";
 
 function App() {
   return (
@@ -42,9 +43,7 @@ function App() {
           </div>
         </section>
       </main>
-      <footer className="footer">
-        <p className="footer__copyright">© 2021 Wszelkie prawa zastrzeżone</p>
-      </footer>
+      <Footer />
     </div>
   );
 }
