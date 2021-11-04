@@ -1,5 +1,6 @@
 import Header from "./Header";
 import Footer from "./Footer";
+import Page from "./Page";
 
 function App() {
   return (
@@ -7,7 +8,8 @@ function App() {
       <Header
         title="Kalkulator walutowy"
       />
-      <main className="page">
+
+      <Page>
         <section className="calculator">
           <div className="container">
             <form className="formCalculator js-form">
@@ -15,14 +17,14 @@ function App() {
                 <legend className="formCalculator__legend">Przelicznik walut</legend>
                 <p>
                   <label className="formCalculator__label"><span className="formCalculator__labelText">Podaj kwote
-                    (zł):</span>
+                    (zł): </span>
                     <input autoFocus required className="formCalculator__input js-form-input" type="number"
                       min="1" step="any" />
                   </label>
                 </p>
                 <p>
                   <label className="formCalculator__label"><span className="formCalculator__labelText">Przelicz
-                    na:</span>
+                    na: </span>
                     <select className="formCalculator__select js-form-select">
                       <option value="eur" >EUR - Euro</option>
                       <option value="usd">USD - dolar amerykański</option>
@@ -37,12 +39,13 @@ function App() {
               <p className="calculator__result js-calculator-result"></p>
               <p className="calculator__info">1 PLN = <strong className="js-calculator-change"></strong>, według
                 średniego
-                kursu NBP z dn. 30.09.2021
+                kursu NBP z dn.30.09.2021
               </p>
             </div>
           </div>
         </section>
-      </main>
+      </Page>
+
       <Footer />
     </div>
   );

@@ -14,26 +14,6 @@ body {
 	flex-direction: column;
 }
 
-.page {
-	display: flex;
-	position: relative;
-	flex-direction: column;
-	flex: 1 1 auto;
-	background-image: url('./images/convertor_bg.jpeg');
-	background-position: center;
-	background-size: cover;
-}
-
-.page::after {
-	content: '';
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-	background: rgba(0, 0, 0, 0.76);
-}
-
 .container {
 	max-width: 1030px;
 	padding: 0 15px;
