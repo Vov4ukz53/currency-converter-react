@@ -4,7 +4,7 @@ import currencies from "../currencies";
 
 const Form = () => {
    const [amount, setAmount] = useState("");
-   // const [currency, setCurrency] = useState("USD");
+   // const [currency, setCurrency] = useState("");
 
    const onFormSubmit = (event) => {
       event.preventDefault();
@@ -19,8 +19,8 @@ const Form = () => {
          <fieldset className="form__fieldset">
             <legend className="form__legend">Przelicznik walut</legend>
             <p>
-               <label className="form__label"><span className="form__labelText">Podaj kwote
-                  (zł): </span>
+               <label className="form__label">
+                  <span className="form__labelText">Podaj kwote (zł): </span>
                   <input
                      value={amount}
                      onChange={({ target }) => setAmount(target.value)}
@@ -32,12 +32,18 @@ const Form = () => {
                </label>
             </p>
             <p>
-               <label className="form__label"><span className="form__labelText">Przelicz
-                  na: </span>
+               <label className="form__label">
+                  <span className="form__labelText">Przelicz na: </span>
                   <select className="form__select">
-                     <option value={currencies.content}>{currencies.name}</option>
-                     <option value={currencies.content}>{currencies.name}</option>
-                     <option value={currencies.content}>{currencies.name}</option>
+                     {currencies.map((currency) => (
+                        <option
+                           key={currency.content}
+                           value={currency.content}
+                           // onChange={({ target }) => setCurrency(target.value)}
+                        >
+                           {currency.name}
+                        </option>
+                     ))};
                   </select>
                </label>
             </p>
