@@ -14,8 +14,9 @@ function App() {
         />
 
         <Calculator
-          body= {<Form/>}
-          footer = {<CalculatorFooter/>}
+          body=
+          {<Form />}
+          footer={<CalculatorFooter />}
         />
 
         <Footer />
