@@ -1,15 +1,23 @@
-// import { useState } from "react";
+import { useState } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import Page from "./Page";
 import Calculator from "./Calculator";
 import Form from "./Form";
 import CalculatorFooter from "./CalculatorFooter";
-// import currencies from "./currencies";
+import currencies from "./currencies";
 
 function App() {
 
-  // const [result, setResult] = useState({});
+  const [result, setResult] = useState(
+    { fromCurrency: "PLN", toCurrency: "", endResult: "" }
+  );
+
+  
+
+  const calculateResult = (amount) => {
+    return amount / 2;
+  };
 
   return (
     <div className="App">
@@ -20,7 +28,9 @@ function App() {
 
         <Calculator
           body=
-          {<Form />}
+          {<Form
+            calculateResult={calculateResult}
+          />}
           footer={<CalculatorFooter />}
         />
 

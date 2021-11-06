@@ -4,12 +4,18 @@ import currencies from "../currencies";
 
 const Form = () => {
    const [amount, setAmount] = useState("");
-   // const [currency, setCurrency] = useState("");
+   const [selectedCurrency, setSelectedCurrency] = useState();
+   
 
    const onFormSubmit = (event) => {
       event.preventDefault();
 
-   }
+      if (amount.length !== 0) {
+         // console.log(currencies.map(currency => currency.rate));
+         // console.log(selectedCurrency);
+         console.log(selectedCurrency);
+      }
+   };
 
    return (
       <form
@@ -26,20 +32,22 @@ const Form = () => {
                      onChange={({ target }) => setAmount(target.value)}
                      autoFocus
                      className="form__input"
-                     type="number"
-                     min="1" step="any"
+                     type="number" min="1" step="any"
                   />
                </label>
             </p>
             <p>
                <label className="form__label">
                   <span className="form__labelText">Przelicz na: </span>
-                  <select className="form__select">
+                  <select
+                     className="form__select"
+                     value={selectedCurrency}
+                     onChange={({ target }) => setSelectedCurrency(target.value)}
+                  >
                      {currencies.map((currency) => (
                         <option
-                           key={currency.content}
+                           key={currency.rate}
                            value={currency.content}
-                           // onChange={({ target }) => setCurrency(target.value)}
                         >
                            {currency.name}
                         </option>

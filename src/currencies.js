@@ -1,4 +1,3 @@
-// import { useState } from "react";
 
 const currencies = [
     { content: "eur", name: "Euro", rate: 0.22 },
