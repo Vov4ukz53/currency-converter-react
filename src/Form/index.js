@@ -4,16 +4,26 @@ import currencies from "../currencies";
 
 const Form = () => {
    const [amount, setAmount] = useState("");
-   const [selectedCurrency, setSelectedCurrency] = useState();
-   
+   const [selectedCurrency, setSelectedCurrency] = useState("USD - dolar amerykański");
+   const rate = () => currencies.find(currency => {
+      if (currency.content === selectedCurrency) {
+      
+      }
+   });
+   // const calculateResult = () => {
+   //    currencies.find(currency => {
+   //       if (currency.content === selectedCurrency) {
+   //          return currency;
+   //       }
+   //    });
+   // };
 
    const onFormSubmit = (event) => {
       event.preventDefault();
 
       if (amount.length !== 0) {
-         // console.log(currencies.map(currency => currency.rate));
-         // console.log(selectedCurrency);
-         console.log(selectedCurrency);
+         //calculateResult();
+         console.log(rate(setSelectedCurrency));
       }
    };
 
@@ -46,7 +56,7 @@ const Form = () => {
                   >
                      {currencies.map((currency) => (
                         <option
-                           key={currency.rate}
+                           key={currency.content}
                            value={currency.content}
                         >
                            {currency.name}

@@ -1,5 +1,5 @@
 import "./style.css";
-import Container from "../Container";
+import Container from "./Container";
 
 const Calculator = ({ body, footer }) => (
    <section className="calculator">
