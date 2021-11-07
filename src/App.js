@@ -10,11 +10,14 @@ function App() {
 
   const [result, setResult] = useState();
 
-  const calculateResult = (amount, selectedCurrency) => {
-    const selectedRate = currencies.find(
-      ({ content }) => content === selectedCurrency).rate;
+  const selectedRate = (selectedCurrency) => currencies.find(
+    ({ content }) => content === selectedCurrency).rate;
 
-    setResult({ inputAmount: +amount, outputAmount: amount * selectedRate, selectedCurrency });
+  const calculateResult = (amount, selectedCurrency) => {
+    // const selectedRate = currencies.find(
+    //   ({ content }) => content === selectedCurrency).rate;
+
+    setResult({ inputAmount: +amount, outputAmount: amount * selectedRate(selectedCurrency), selectedCurrency });
   };
 
   return (
@@ -31,7 +34,9 @@ function App() {
           />}
 
         result={
-          <Result result={result}
+          <Result
+            result={result}
+            selectedRate={selectedRate}
           />}
       />
 
