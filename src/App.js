@@ -24,15 +24,15 @@ function App() {
       />
 
       <Calculator
-        body=
-        {<Form
-          calculateResult={calculateResult}
-          result={result}
-        />}
-        result=
-        {<Result
-          result={result}
-        />}
+        body={
+          <Form
+            calculateResult={calculateResult}
+            result={result}
+          />}
+
+        result={
+          <Result result={result}
+          />}
       />
 
       <Footer />
