@@ -11,7 +11,7 @@ function App() {
   const [result, setResult] = useState();
 
   const calculateResult = (amount, selectedCurrency) => {
-    const selectedRate = (selectedCurrency) => currencies.find(
+    const selectedRate = currencies.find(
       ({ content }) => content === selectedCurrency).rate;
 
     setResult({ inputAmount: +amount, outputAmount: amount * selectedRate, selectedCurrency });
@@ -28,10 +28,11 @@ function App() {
         {<Form
           calculateResult={calculateResult}
           result={result}
-
         />}
         result=
-        {<CalculatorResult />}
+        {<CalculatorResult
+          result={result}
+        />}
       />
 
       <Footer />

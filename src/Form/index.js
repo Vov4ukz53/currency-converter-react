@@ -6,12 +6,13 @@ const Form = ({ calculateResult }) => {
    const [amount, setAmount] = useState("");
    const [selectedCurrency, setSelectedCurrency] = useState(currencies[0].content);
 
-
-
    const onFormSubmit = (event) => {
       event.preventDefault();
 
-      console.log(calculateResult(amount, selectedCurrency));
+      if (amount.length !== 0){
+         calculateResult(amount, selectedCurrency);
+         setAmount("");
+      }
    };
 
    return (
