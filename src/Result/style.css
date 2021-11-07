@@ -1,0 +1,18 @@
+.result {
+	position: relative;
+	z-index: 1;
+	text-align: center;
+}
+
+.result__main {
+	display: inline-block;
+	font-size: 22px;
+	font-weight: 700;
+}
+
+.result__info {
+	color: #dbd7d7;
+	line-height: 1.5;
+	margin-top: 0;
+	padding: 0 15px;
+}
