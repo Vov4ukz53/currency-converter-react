@@ -3,15 +3,18 @@ import Header from "./Header";
 import Footer from "./Footer";
 import Calculator from "./Calculator";
 import Form from "./Form";
-import CalculatorFooter from "./CalculatorFooter";
+import CalculatorResult from "./CalculatorResult";
 import currencies from "./currencies";
 
 function App() {
 
-  const [result, setResult] = useState({});
+  const [result, setResult] = useState();
 
-  const calculateResult = (amount) => {
+  const calculateResult = (amount, selectedCurrency) => {
+    const selectedRate = (selectedCurrency) => currencies.find(
+      ({ content }) => content === selectedCurrency).rate;
 
+    setResult({ inputAmount: +amount, outputAmount: amount * selectedRate, selectedCurrency });
   };
 
   return (
@@ -24,9 +27,11 @@ function App() {
         body=
         {<Form
           calculateResult={calculateResult}
+          result={result}
+
         />}
-        footer=
-        {<CalculatorFooter />}
+        result=
+        {<CalculatorResult />}
       />
 
       <Footer />

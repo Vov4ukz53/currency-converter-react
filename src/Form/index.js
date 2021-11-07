@@ -2,29 +2,16 @@ import { useState } from "react";
 import "./style.css";
 import currencies from "../currencies";
 
-const Form = () => {
+const Form = ({ calculateResult }) => {
    const [amount, setAmount] = useState("");
-   const [selectedCurrency, setSelectedCurrency] = useState("USD - dolar amerykański");
-   const rate = () => currencies.find(currency => {
-      if (currency.content === selectedCurrency) {
-      
-      }
-   });
-   // const calculateResult = () => {
-   //    currencies.find(currency => {
-   //       if (currency.content === selectedCurrency) {
-   //          return currency;
-   //       }
-   //    });
-   // };
+   const [selectedCurrency, setSelectedCurrency] = useState(currencies[0].content);
+
+
 
    const onFormSubmit = (event) => {
       event.preventDefault();
 
-      if (amount.length !== 0) {
-         //calculateResult();
-         console.log(rate(setSelectedCurrency));
-      }
+      console.log(calculateResult(amount, selectedCurrency));
    };
 
    return (

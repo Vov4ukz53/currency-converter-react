@@ -1,11 +1,11 @@
 import "./style.css";
 import Container from "./Container";
 
-const Calculator = ({ body, footer }) => (
+const Calculator = ({ body, result }) => (
    <section className="calculator">
       <Container>
          {body}
-         {footer}
+         {result}
       </Container>
    </section>
 );
