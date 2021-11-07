@@ -11,7 +11,6 @@ const Form = ({ calculateResult }) => {
 
       if (amount.length !== 0){
          calculateResult(amount, selectedCurrency);
-         setAmount("");
       }
    };
 

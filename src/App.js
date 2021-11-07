@@ -3,7 +3,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import Calculator from "./Calculator";
 import Form from "./Form";
-import CalculatorResult from "./CalculatorResult";
+import Result from "./Result";
 import currencies from "./currencies";
 
 function App() {
@@ -30,7 +30,7 @@ function App() {
           result={result}
         />}
         result=
-        {<CalculatorResult
+        {<Result
           result={result}
         />}
       />
