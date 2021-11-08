@@ -15,7 +15,7 @@ const Result = ({ result, selectedRate }) => {
          <p className="result__info">
             1 PLN =
             <strong className="result__info result__info--rate">
-               {selectedRate(result.selectedCurrency)}
+               {selectedRate(result.selectedCurrency)}{" "}
                {result.selectedCurrency.toUpperCase()}
             </strong>, według średniego kursu NBP z dn.30.09.2021
          </p>
