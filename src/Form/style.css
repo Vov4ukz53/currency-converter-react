@@ -31,6 +31,11 @@
     width: 250px;
     border-radius: 5px;
     font-weight: 700;
+    transition: transform .3s;
+}
+
+.form__input--active{
+    transform:scale(1.05);
 }
 
 .form__select {

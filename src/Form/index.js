@@ -9,6 +9,7 @@ const Form = ({ calculateResult }) => {
    const onFormSubmit = (event) => {
       event.preventDefault();
       calculateResult(amount, selectedCurrency);
+      setAmount("");
    };
 
    return (
@@ -27,7 +28,9 @@ const Form = ({ calculateResult }) => {
                      value={amount}
                      onChange={({ target }) => setAmount(target.value)}
                      autoFocus required
-                     className="form__input"
+                     className={`form__input${amount.length !== 0
+                        ? " form__input--active"
+                        : ""}`}
                      type="number" min="1" step="any"
                   />
                </label>
