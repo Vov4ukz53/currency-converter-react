@@ -14,7 +14,11 @@ function App() {
     ({ content }) => content === selectedCurrency).rate;
 
   const calculateResult = (amount, selectedCurrency) => {
-    setResult({ inputAmount: +amount, outputAmount: amount * selectedRate(selectedCurrency), selectedCurrency });
+    setResult({
+      inputAmount: +amount,
+      outputAmount: amount * selectedRate(selectedCurrency),
+      selectedCurrency
+    });
   };
 
   return (

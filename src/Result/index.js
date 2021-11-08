@@ -20,7 +20,7 @@ const Result = ({ result, selectedRate }) => {
             </strong>, według średniego kursu NBP z dn.30.09.2021
          </p>
       </div>
-   )
+   );
 };
 
 export default Result;

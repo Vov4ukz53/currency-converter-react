@@ -57,6 +57,6 @@ const Form = ({ calculateResult }) => {
          </fieldset>
       </form>
    );
-}
+};
 
 export default Form;
