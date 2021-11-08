@@ -8,10 +8,7 @@ const Form = ({ calculateResult }) => {
 
    const onFormSubmit = (event) => {
       event.preventDefault();
-
-      if (amount.length !== 0){
-         calculateResult(amount, selectedCurrency);
-      }
+      calculateResult(amount, selectedCurrency);
    };
 
    return (
@@ -20,14 +17,16 @@ const Form = ({ calculateResult }) => {
          onSubmit={onFormSubmit}
       >
          <fieldset className="form__fieldset">
-            <legend className="form__legend">Przelicznik walut</legend>
+            <legend className="form__legend">
+               Przelicznik walut
+            </legend>
             <p>
                <label className="form__label">
-                  <span className="form__labelText">Podaj kwote (zł): </span>
+                  <span className="form__labelText">Podaj kwote (zł)*:</span>
                   <input
                      value={amount}
                      onChange={({ target }) => setAmount(target.value)}
-                     autoFocus
+                     autoFocus required
                      className="form__input"
                      type="number" min="1" step="any"
                   />
@@ -35,7 +34,9 @@ const Form = ({ calculateResult }) => {
             </p>
             <p>
                <label className="form__label">
-                  <span className="form__labelText">Przelicz na: </span>
+                  <span className="form__labelText">
+                     Przelicz na:
+                  </span>
                   <select
                      className="form__select"
                      value={selectedCurrency}

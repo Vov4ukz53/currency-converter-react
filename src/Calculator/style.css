@@ -1,8 +1,8 @@
 .calculator {
-    position: relative;
+	position: relative;
 	padding-top: 80px;
 	color: #fff;
-    background-image: url('../images/convertor_bg.jpeg');
+	background-image: url('../images/convertor_bg.jpeg');
 	background-position: center;
 	background-size: cover;
 	display: flex;
@@ -17,7 +17,7 @@
 	height: 100%;
 	top: 0;
 	left: 0;
-	background: rgba(0, 0, 0, 0.76);
+	background: rgba(0, 0, 0, 0.80);
 }
 
 @media (max-width: 767px) {
@@ -29,8 +29,5 @@
 @media (max-width: 490px) {
 	.calculator {
 		padding-top: 30px;
-	}
-	.calculator__body {
-		margin: 0 -15px;
 	}
 }

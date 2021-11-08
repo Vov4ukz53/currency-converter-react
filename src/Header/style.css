@@ -10,9 +10,6 @@
 }
 
 @media (max-width: 767px) {
-    .header {
-        border-radius: none;
-    }
     .header__title {
         font-size: 24px;
         padding: 10px 0;
