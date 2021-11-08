@@ -3,7 +3,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Demo
-https://vov4ukz53.github.io/currency-converter/
+Here you can see my [demo](https://vov4ukz53.github.io/currency-converter/)
 
 ## Used Technologies:
 - HTML5
