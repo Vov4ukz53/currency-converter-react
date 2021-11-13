@@ -9,8 +9,8 @@ const Result = ({ result, selectedRate }) => {
    return (
       <div className="result">
          <p className="result__main">
-            {result.inputAmount.toFixed(2)} pln = {result.outputAmount.toFixed(2)}{" "}
-            {result.selectedCurrency}
+            {result.inputAmount.toFixed(2)} PLN = {result.outputAmount.toFixed(2)}{" "}
+            {result.selectedCurrency.toUpperCase()}
          </p>
          <p className="result__info">
             1 PLN =
