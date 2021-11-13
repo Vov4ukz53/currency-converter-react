@@ -1,10 +1,19 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import "./style.css";
 import currencies from "../../currencies";
 
 const Form = ({ calculateResult, clock }) => {
    const [amount, setAmount] = useState("");
    const [selectedCurrency, setSelectedCurrency] = useState(currencies[0].content);
+   const [click, setClick] = useState(true);
+   const inputRef = useRef();
+
+   const onButtonClick = () => {
+      setClick(click => click)
+      if (click) {
+         inputRef.current.focus();
+      }
+   };
 
    const onFormSubmit = (event) => {
       event.preventDefault();
@@ -22,7 +31,7 @@ const Form = ({ calculateResult, clock }) => {
             <legend className="form__legend">
                Przelicznik walut
             </legend>
-            <p className="form__item"> 
+            <p className="form__item">
                <label className="form__label">
                   <span className="form__labelText">Podaj kwote (zł)*:</span>
                   <input
@@ -33,6 +42,7 @@ const Form = ({ calculateResult, clock }) => {
                         ? " form__input--active"
                         : ""}`}
                      type="number" min="1" step="any"
+                     ref={inputRef}
                   />
                </label>
             </p>
@@ -57,7 +67,12 @@ const Form = ({ calculateResult, clock }) => {
                   </select>
                </label>
             </p>
-            <button className="form__button">Przelicz</button>
+            <button
+               className="form__button"
+               onClick={onButtonClick}
+            >
+               Przelicz
+            </button>
          </fieldset>
       </form>
    );
