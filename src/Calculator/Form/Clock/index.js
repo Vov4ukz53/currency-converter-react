@@ -13,12 +13,15 @@ export const Clock = () => {
         }
     }, []);
 
-
     return (
         <p className="clock">
-            Disiaj jest {date.toLocaleString("pl", { weekday: "long" })},&nbsp;
-            {date.toLocaleString("pl", { day: "numeric", month: "long" })},&nbsp;
-            {date.toLocaleString("pl", { hour: "numeric", minute: "numeric", second: "numeric" })}
+            Disiaj jest&nbsp;
+            {date.toLocaleString("pl",
+                { weekday: "long" })},&nbsp;
+            {date.toLocaleString("pl",
+                { day: "numeric", month: "long" })},&nbsp;
+            {date.toLocaleString("pl",
+                { hour: "numeric", minute: "numeric", second: "numeric" })}
         </p>
     )
 }
