@@ -2,8 +2,8 @@ import { useState } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import Calculator from "./Calculator";
-import Form from "./Form";
-import Result from "./Result";
+import Form from "./Calculator/Form";
+import Result from "./Calculator/Result";
 import currencies from "./currencies";
 
 function App() {
