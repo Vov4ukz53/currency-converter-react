@@ -24,4 +24,4 @@ export const Clock = () => {
                 { hour: "numeric", minute: "numeric", second: "numeric" })}
         </p>
     )
-}
+};
