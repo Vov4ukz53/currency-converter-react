@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./style.css";
 import currencies from "../../currencies";
 
-const Form = ({ calculateResult }) => {
+const Form = ({ calculateResult, clock }) => {
    const [amount, setAmount] = useState("");
    const [selectedCurrency, setSelectedCurrency] = useState(currencies[0].content);
 
@@ -17,11 +17,12 @@ const Form = ({ calculateResult }) => {
          className="form"
          onSubmit={onFormSubmit}
       >
+         {clock}
          <fieldset className="form__fieldset">
             <legend className="form__legend">
                Przelicznik walut
             </legend>
-            <p>
+            <p className="form__item"> 
                <label className="form__label">
                   <span className="form__labelText">Podaj kwote (zł)*:</span>
                   <input
@@ -35,7 +36,7 @@ const Form = ({ calculateResult }) => {
                   />
                </label>
             </p>
-            <p>
+            <p className="form__item">
                <label className="form__label">
                   <span className="form__labelText">
                      Przelicz na:

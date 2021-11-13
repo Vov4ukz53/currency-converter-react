@@ -5,6 +5,7 @@ import Calculator from "./Calculator";
 import Form from "./Calculator/Form";
 import Result from "./Calculator/Result";
 import currencies from "./currencies";
+import { Clock } from "./Calculator/Form/Clock";
 
 function App() {
 
@@ -30,6 +31,7 @@ function App() {
       <Calculator
         body={
           <Form
+            clock={<Clock />}
             calculateResult={calculateResult}
             result={result}
           />}
