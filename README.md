@@ -8,7 +8,6 @@ Here you can see my [demo](https://vov4ukz53.github.io/currency-converter-react/
 ## Used Technologies:
 - HTML5
 - BEM
-- Grid Layout
 - CSS
 - JavaScript/ES6+ Features
 - React
