@@ -46,7 +46,7 @@ const Form = ({ calculateResult, clock }) => {
                   />
                </label>
             </p>
-            <p className="form__item">
+            <p className="form__item form__item--select">
                <label className="form__label">
                   <span className="form__labelText">
                      Przelicz na:
