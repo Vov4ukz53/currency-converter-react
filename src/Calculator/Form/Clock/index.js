@@ -27,6 +27,7 @@ export const Clock = () => {
    return (
       <p className="clock">
          Disiaj jest
+         {" "}
          {formateDate(date)}
       </p>
    );
