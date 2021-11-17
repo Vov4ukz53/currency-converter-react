@@ -5,14 +5,10 @@ import currencies from "../../currencies";
 const Form = ({ calculateResult, clock }) => {
    const [amount, setAmount] = useState("");
    const [selectedCurrency, setSelectedCurrency] = useState(currencies[0].content);
-   const [click, setClick] = useState(true);
    const inputRef = useRef();
 
    const onButtonClick = () => {
-      setClick(click => click)
-      if (click) {
          inputRef.current.focus();
-      }
    };
 
    const onFormSubmit = (event) => {
