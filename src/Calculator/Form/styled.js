@@ -6,7 +6,7 @@ export const Wrapper = styled.form`
    background-color: rgba(231, 224, 224, 0.568);
    border-radius: 5px;
    padding: 30px;
-   box-shadow: 3px 3px 5px #ffffff;
+   box-shadow: 3px 3px 5px ${({theme}) => theme.colors.textColor};
    margin-bottom: 22px;
 
    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
