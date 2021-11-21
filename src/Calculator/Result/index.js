@@ -8,7 +8,7 @@ const Result = ({ result, selectedRate }) => (
                {result.inputAmount.toFixed(2)} PLN = {result.outputAmount.toFixed(2)}{" "}
                {result.selectedCurrency.toUpperCase()}
             </ResultMain>
-            <ResultInfo className="result__info">
+            <ResultInfo>
                1 PLN =
                <Rate>
                   {" "}{selectedRate(result.selectedCurrency)}{" "}
