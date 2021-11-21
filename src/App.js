@@ -11,7 +11,6 @@ import { ThemeProvider } from "styled-components";
 import { theme } from "./theme";
 
 function App() {
-
   const [result, setResult] = useState();
 
   const selectedRate = (selectedCurrency) => currencies.find(

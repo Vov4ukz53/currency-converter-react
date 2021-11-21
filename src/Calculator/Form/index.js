@@ -1,5 +1,7 @@
 import { useState, useRef } from "react";
-import { Wrapper, Fieldset, Legend, Item, Content, Input, Button } from "./styled.js";
+import {
+   Wrapper, Fieldset, Legend, Item, Content, Input, Button
+} from "./styled.js";
 import currencies from "../../currencies";
 
 const Form = ({ calculateResult, clock }) => {

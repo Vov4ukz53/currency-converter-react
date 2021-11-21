@@ -7,7 +7,7 @@ export const formateDate = (date) =>
       month: "long",
       hour: "numeric",
       minute: "numeric",
-      second: "numeric"
+      second: "numeric",
    });
 
 export const useCurrentDate = () => {
