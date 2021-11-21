@@ -1,5 +1,5 @@
 import { useState, useRef } from "react";
-import "./style.css";
+import { Wrapper, Fieldset, Legend, Item, Content, Input, Button } from "./styled.js";
 import currencies from "../../currencies";
 
 const Form = ({ calculateResult, clock }) => {
@@ -8,7 +8,7 @@ const Form = ({ calculateResult, clock }) => {
    const inputRef = useRef();
 
    const onButtonClick = () => {
-         inputRef.current.focus();
+      inputRef.current.focus();
    };
 
    const onFormSubmit = (event) => {
@@ -18,59 +18,52 @@ const Form = ({ calculateResult, clock }) => {
    };
 
    return (
-      <form
-         className="form"
+      <Wrapper
          onSubmit={onFormSubmit}
       >
          {clock}
-         <fieldset className="form__fieldset">
-            <legend className="form__legend">
+         <Fieldset>
+            <Legend>
                Przelicznik walut
-            </legend>
-            <p className="form__item">
-               <label className="form__label">
-                  <span className="form__labelText">Podaj kwote (zł)*:</span>
-                  <input
-                     value={amount}
-                     onChange={({ target }) => setAmount(target.value)}
-                     autoFocus required
-                     className={`form__input${amount.length !== 0
-                        ? " form__input--active"
-                        : ""}`}
-                     type="number" min="1" step="any"
-                     ref={inputRef}
-                  />
-               </label>
-            </p>
-            <p className="form__item form__item--select">
-               <label className="form__label">
-                  <span className="form__labelText">
-                     Przelicz na:
-                  </span>
-                  <select
-                     className="form__select"
-                     value={selectedCurrency}
-                     onChange={({ target }) => setSelectedCurrency(target.value)}
-                  >
-                     {currencies.map((currency) => (
-                        <option
-                           key={currency.content}
-                           value={currency.content}
-                        >
-                           {currency.name}
-                        </option>
-                     ))};
-                  </select>
-               </label>
-            </p>
-            <button
-               className="form__button"
+            </Legend>
+            <Item>
+               <Content>
+                  Podaj kwote (zł)*:
+               </Content>
+               <Input
+                  active={amount.length !== 0}
+                  value={amount}
+                  onChange={({ target }) => setAmount(target.value)}
+                  autoFocus required
+                  type="number" min="1" step="any"
+                  ref={inputRef}
+               />
+            </Item>
+            <Item>
+               <Content>
+                  Przelicz na:
+               </Content>
+               <Input as="select"
+                  value={selectedCurrency}
+                  onChange={({ target }) => setSelectedCurrency(target.value)}
+               >
+                  {currencies.map((currency) => (
+                     <option
+                        key={currency.content}
+                        value={currency.content}
+                     >
+                        {currency.name}
+                     </option>
+                  ))};
+               </Input>
+            </Item>
+            <Button
                onClick={onButtonClick}
             >
                Przelicz
-            </button>
-         </fieldset>
-      </form>
+            </Button>
+         </Fieldset>
+      </Wrapper>
    );
 };
 

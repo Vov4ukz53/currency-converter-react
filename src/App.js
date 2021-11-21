@@ -1,11 +1,14 @@
 import { useState } from "react";
+import GlobalStyle from "./globalStyle";
 import Header from "./Header";
-import Footer from "./Footer";
 import Calculator from "./Calculator";
 import Form from "./Calculator/Form";
 import Result from "./Calculator/Result";
+import Footer from "./Footer";
 import currencies from "./currencies";
 import { Clock } from "./Calculator/Form/Clock";
+import { ThemeProvider } from "styled-components";
+import { theme } from "./theme";
 
 function App() {
 
@@ -24,26 +27,29 @@ function App() {
 
   return (
     <div className="App">
-      <Header
-        title="Kalkulator walutowy"
-      />
+      <ThemeProvider theme={theme}>
+        <GlobalStyle />
+        <Header
+          title="Kalkulator walutowy"
+        />
 
-      <Calculator
-        body={
-          <Form
-            clock={<Clock />}
-            calculateResult={calculateResult}
-            result={result}
-          />}
+        <Calculator
+          body={
+            <Form
+              clock={<Clock />}
+              calculateResult={calculateResult}
+              result={result}
+            />}
 
-        result={
-          <Result
-            result={result}
-            selectedRate={selectedRate}
-          />}
-      />
+          result={
+            <Result
+              result={result}
+              selectedRate={selectedRate}
+            />}
+        />
 
-      <Footer />
+        <Footer />
+      </ThemeProvider>
     </div>
   );
 }

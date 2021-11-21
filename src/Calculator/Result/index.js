@@ -1,23 +1,23 @@
-import "./style.css";
+import { Wrapper, ResultMain, ResultInfo, Rate } from "./styled.js";
 
 const Result = ({ result, selectedRate }) => (
-   <div className="result">
+   <Wrapper>
       {result !== undefined && (
          <>
-            <p className="result__main">
+            <ResultMain>
                {result.inputAmount.toFixed(2)} PLN = {result.outputAmount.toFixed(2)}{" "}
                {result.selectedCurrency.toUpperCase()}
-            </p>
-            <p className="result__info">
+            </ResultMain>
+            <ResultInfo className="result__info">
                1 PLN =
-               <strong className="result__info result__info--rate">
-                  {selectedRate(result.selectedCurrency)}{" "}
-                  {result.selectedCurrency.toUpperCase()}
-               </strong>, według średniego kursu NBP z dn.30.09.2021
-            </p>
+               <Rate>
+                  {" "}{selectedRate(result.selectedCurrency)}{" "}
+                  {result.selectedCurrency.toUpperCase()}{" "}
+               </Rate>, według średniego kursu NBP z dn.30.09.2021
+            </ResultInfo>
          </>
       )}
-   </div>
+   </Wrapper>
 );
 
 export default Result;

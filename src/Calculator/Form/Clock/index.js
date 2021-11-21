@@ -1,14 +1,14 @@
 import { useCurrentDate, formateDate } from "./useCurrentDate";
-import "./style.css";
+import {Date} from "./styled.js";
 
 export const Clock = () => {
    const date = useCurrentDate();
 
    return (
-      <p className="clock">
+      <Date>
          Disiaj jest
          {" "}
          {formateDate(date)}
-      </p>
+      </Date>
    );
 };

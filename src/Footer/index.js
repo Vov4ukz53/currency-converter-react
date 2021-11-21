@@ -1,9 +1,9 @@
-import "./style.css";
+import { Wrapper } from "./styled.js";
 
 const Footer = () => (
-    <footer className="footer">
-        © 2021 Wszelkie prawa zastrzeżone
-    </footer>
+   <Wrapper >
+      © 2021 Wszelkie prawa zastrzeżone
+   </Wrapper>
 );
 
 export default Footer;
