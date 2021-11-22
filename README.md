@@ -35,7 +35,7 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+See the section about [deployment](https://i.ibb.co/CJ1pHZd/currency-converter-react3.gif) for more information.
 
 ### `npm run eject`
 
@@ -48,4 +48,4 @@ Instead, it will copy all the configuration files and the transitive dependencie
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
 ## How to use
-![how to use](https://i.ibb.co/qChTPLy/currency-converter-react.gif)
+![how to use](https://i.ibb.co/CJ1pHZd/currency-converter-react3.gif)
