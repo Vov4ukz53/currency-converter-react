@@ -41,11 +41,12 @@ const Form = ({ calculateResult, clock }) => {
                   ref={inputRef}
                />
             </Item>
-            <Item>
+            <Item select>
                <Content>
                   Przelicz na:
                </Content>
                <Input as="select"
+                  select
                   value={selectedCurrency}
                   onChange={({ target }) => setSelectedCurrency(target.value)}
                >
