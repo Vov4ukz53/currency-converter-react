@@ -1,5 +1,6 @@
 export const theme = {
    breakpoints: {
+      tablet: 992,
       mobile: 767,
       extraSmall: 490,
    },
