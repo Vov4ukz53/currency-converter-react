@@ -81,6 +81,7 @@ export const Input = styled.input`
    border-radius: 5px;
    font-weight: 700;
    transition: transform .3s;
+   color: #000;
 
    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
       width: 100%;
@@ -108,11 +109,13 @@ export const Button = styled.button`
    margin-top: 15px;
    font-size: 18px;
 
-   &:hover {
-      background-color: hsl(135, 70%, 26%);
-      box-shadow: 2px 2px 3px ${({ theme }) => theme.colors.textColor};
+   @media (min-width: ${({ theme }) => theme.breakpoints.tablet}px) {
+      &:hover {
+         background-color: hsl(135, 70%, 26%);
+         box-shadow: 2px 2px 3px ${({ theme }) => theme.colors.textColor};
+      }
    }
-
+   
    &:active {
       background-color: hsl(135, 70%, 30%);
    }
