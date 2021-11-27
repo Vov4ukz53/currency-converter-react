@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 export const formateDate = (date) =>
-   date.toLocaleString(undefined, {
+   date.toLocaleString("Pl", {
       weekday: "long",
       day: "numeric",
       month: "long",
