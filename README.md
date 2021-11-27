@@ -14,6 +14,7 @@ Here you can see my [demo](https://vov4ukz53.github.io/currency-converter-react/
 - Create React App
 - Styled Components
 - React Hooks
+- Custom Hooks
 
 ## Available Scripts
 
