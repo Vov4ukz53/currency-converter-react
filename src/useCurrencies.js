@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import axios from "axios";
 
 export const useCurrencies = () => {
    const [currenciesData, setCurrenciesData] = useState({});
@@ -6,13 +7,8 @@ export const useCurrencies = () => {
    useEffect(() => {
       const getCurrencies = async () => {
          try {
-            const response = await fetch("https://api.exchangerate.host/latest?base=PLN");
-            
-            if (!response.ok) {
-               throw new Error(response.statusText);
-            }
-
-            const { rates, date } = await response.json();
+            const response = await axios.get("https://api.exchangerate.host/latest?base=PLN");
+            const { rates, date } = await response.data;
             setCurrenciesData({ rates, date, state: "success" });
          } catch (error) {
             setCurrenciesData({ state: "error" });
