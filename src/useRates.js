@@ -16,6 +16,7 @@ export const useRates = () => {
             setRatesData({ rates, date, state: "success" });
          } catch (error) {
             setRatesData({ state: "error" });
+            console.error(error);
          }
       };
       setTimeout(getRates, 1500);

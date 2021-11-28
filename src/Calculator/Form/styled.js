@@ -143,6 +143,7 @@ export const Paragraph = styled.p`
       text-align: center;
       padding: 0px;
       font-weight: 400;
+      font-size: 14px;
    `}
 `;
 
