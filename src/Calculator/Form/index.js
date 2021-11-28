@@ -10,12 +10,12 @@ import {
    Paragraph,
    StyledStrong
 } from "./styled.js";
-import { useRates } from "../../useRates.js";
+import { useCurrencies } from "../../useCurrencies.js";
 
 const Form = ({ calculateResult, clock }) => {
    const [amount, setAmount] = useState("");
    const [selectedCurrency, setSelectedCurrency] = useState("EUR");
-   const ratesData = useRates();
+   const currenciesData = useCurrencies();
    const inputRef = useRef();
 
    const onButtonClick = () => {
@@ -39,11 +39,11 @@ const Form = ({ calculateResult, clock }) => {
             </Legend>
             {
                (() => {
-                  if (ratesData.state === "error") {
+                  if (currenciesData.state === "error") {
                      return <Paragraph error >
                         Coś  poszlo nie tak. Sprawdź, czy masz polaczenie z internetem. Jeśli masz... to nasza wina. Spróbuj pózniej!
                      </Paragraph>
-                  } else if (ratesData.state !== "success") {
+                  } else if (currenciesData.state !== "success") {
                      return <Paragraph download >
                         Laduje kursy walut z Europejskiego Banku Centralnego...
                      </Paragraph>
@@ -73,7 +73,7 @@ const Form = ({ calculateResult, clock }) => {
                               value={selectedCurrency}
                               onChange={({ target }) => setSelectedCurrency(target.value)}
                            >
-                              {Object.keys(ratesData.rates).map((currency) => (
+                              {Object.keys(currenciesData.rates).map((currency) => (
                                  <option
                                     key={currency}
                                     value={currency}
@@ -89,7 +89,7 @@ const Form = ({ calculateResult, clock }) => {
                         <Paragraph info>
                            Aktualne na dzień:
                            <StyledStrong>
-                              {" "}{ratesData.date}
+                              {" "}{currenciesData.date}
                            </StyledStrong>
                         </Paragraph>
                         <Button

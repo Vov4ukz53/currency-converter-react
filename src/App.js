@@ -8,13 +8,13 @@ import Footer from "./Footer";
 import { Clock } from "./Calculator/Form/Clock";
 import { ThemeProvider } from "styled-components";
 import { theme } from "./theme";
-import { useRates } from "./useRates";
+import { useCurrencies } from "./useCurrencies";
 
 function App() {
   const [result, setResult] = useState();
-  const ratesData = useRates();
+  const currenciesData = useCurrencies();
   const selectedRate = (selectedCurrency) =>
-    ratesData.rates[selectedCurrency];
+    currenciesData.rates[selectedCurrency];
 
   const calculateResult = (amount, selectedCurrency) => {
     setResult({
