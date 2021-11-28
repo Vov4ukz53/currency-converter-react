@@ -40,6 +40,7 @@ export const Item = styled.p`
 
    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
       display: block;
+      margin: 10px 0px;
    }
 
    ${({ select }) => select && css`
@@ -130,7 +131,7 @@ export const Paragraph = styled.p`
    padding: 20px;
 
    ${({ download }) => download && css`
-      color: ${({ theme }) => theme.colors.blue};
+      color: ${({ theme }) => theme.colors.mainColor};
    `}
 
    ${({ error }) => error && css`

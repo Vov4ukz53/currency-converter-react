@@ -3,7 +3,7 @@ import background from "./background.jpeg";
 
 export const Wrapper = styled.section`
    position: relative;
-	padding-top: 80px;
+	padding-top: 40px;
 	color: #fff;
 	background-image: url("${background}");
 	background-position: center;
@@ -20,7 +20,7 @@ export const Wrapper = styled.section`
    }
 
    @media (max-width: ${({theme}) => theme.breakpoints.mobile}px) {
-		padding-top: 40px;
+		padding-top: 30px;
    }
 
    @media (max-width: ${({theme}) => theme.breakpoints.extraSmall}px) {

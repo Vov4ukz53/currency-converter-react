@@ -8,10 +8,11 @@ export const Wrapper = styled.header`
 export const MainTitle = styled.h1`
     text-align: center;
     margin: 0;
-    padding: 15px;
+    padding: 10px;
+    font-size: 24px;
 
     @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
-        font-size: 24px;
+        font-size: 20px;
         padding: 10px 0;
     }
 `;
