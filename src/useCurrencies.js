@@ -7,13 +7,13 @@ export const useCurrencies = () => {
       const getCurrencies = async () => {
          try {
             const response = await fetch("https://api.exchangerate.host/latest?base=PLN");
+            const { rates, date } = await response.json();
+            setCurrenciesData({ rates, date, state: "success" });
 
             if (!response.ok) {
                throw new Error(response.statusText);
             }
 
-            const { rates, date } = await response.json();
-            setCurrenciesData({ rates, date, state: "success" });
          } catch (error) {
             setCurrenciesData({ state: "error" });
             console.error(error);
