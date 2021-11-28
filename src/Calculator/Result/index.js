@@ -11,9 +11,9 @@ const Result = ({ result, selectedRate }) => (
             <ResultInfo>
                1 PLN =
                <Rate>
-                  {" "}{selectedRate(result.selectedCurrency)}{" "}
+                  {" "}{selectedRate(result.selectedCurrency).toFixed(2)}{" "}
                   {result.selectedCurrency.toUpperCase()}{" "}
-               </Rate>, według średniego kursu NBP z dn.30.09.2021
+               </Rate>
             </ResultInfo>
          </>
       )}

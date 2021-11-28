@@ -1,9 +1,9 @@
 import styled, { css } from "styled-components";
 
-export const Wrapper = styled.form`
+export const StyledForm = styled.form`
    position: relative;
    z-index: 1;
-   background-color: rgba(231, 224, 224, 0.568);
+   background-color: rgba(231, 224, 224, 0.468);
    border-radius: 5px;
    padding: 30px;
    box-shadow: 3px 3px 5px ${({ theme }) => theme.colors.textColor};
@@ -119,6 +119,37 @@ export const Button = styled.button`
    &:active {
       background-color: hsl(135, 70%, 30%);
    }
+`;
+
+export const Paragraph = styled.p`
+   margin: 0;
+   line-height: 20px;
+   font-size: 16px;
+   font-weight: 700;
+   text-align: left;
+   padding: 20px;
+
+   ${({ download }) => download && css`
+      color: ${({ theme }) => theme.colors.blue};
+   `}
+
+   ${({ error }) => error && css`
+      color: ${({ theme }) => theme.colors.red};
+      background-color: #fff;
+      border-radius: 10px;
+   `};
+
+   ${({info}) => info && css`
+      text-align: center;
+      padding: 0px;
+      font-weight: 400;
+   `}
+`;
+
+export const StyledStrong = styled.strong`
+   color: ${({ theme }) => theme.colors.textColor};
+   font-size: 16px;
+   font-weight: 700;
 `;
 
 

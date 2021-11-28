@@ -9,7 +9,7 @@ export const Wrapper = styled.div`
 export const ResultMain = styled.p`
    font-size: 22px;
 	font-weight: 700;
-	margin-top: 0;
+	margin: 0px 0px 10px 0px;
 `;
 
 export const ResultInfo = styled.p`
@@ -20,5 +20,5 @@ export const ResultInfo = styled.p`
 `;
 
 export const Rate = styled.strong`
-   color: #fff
+   color: ${({theme}) => theme.colors.textColor};
 `;
