@@ -139,7 +139,7 @@ export const Paragraph = styled.p`
       border-radius: 10px;
    `};
 
-   ${({info}) => info && css`
+   ${({ info }) => info && css`
       text-align: center;
       padding: 0px;
       font-weight: 400;

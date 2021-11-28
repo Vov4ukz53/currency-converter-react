@@ -1,6 +1,14 @@
 import { useState, useRef } from "react";
 import {
-   StyledForm, Fieldset, Legend, Item, Content, Input, Button, Paragraph, StyledStrong
+   StyledForm,
+   Fieldset,
+   Legend,
+   Item,
+   Content,
+   Input,
+   Button,
+   Paragraph,
+   StyledStrong
 } from "./styled.js";
 import { useRates } from "../../useRates.js";
 
@@ -48,7 +56,8 @@ const Form = ({ calculateResult, clock }) => {
                            <Input
                               active={amount.length !== 0}
                               value={amount}
-                              onChange={({ target }) => setAmount(target.value)}
+                              onChange={({ target }) =>
+                                 setAmount(target.value)}
                               autoFocus required
                               type="number" min="1" step="any"
                               ref={inputRef}

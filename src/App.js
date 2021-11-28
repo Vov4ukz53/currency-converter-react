@@ -13,7 +13,8 @@ import { useRates } from "./useRates";
 function App() {
   const [result, setResult] = useState();
   const ratesData = useRates();
-  const selectedRate = (selectedCurrency) => ratesData.rates[selectedCurrency];
+  const selectedRate = (selectedCurrency) =>
+    ratesData.rates[selectedCurrency];
 
   const calculateResult = (amount, selectedCurrency) => {
     setResult({
