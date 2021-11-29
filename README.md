@@ -15,6 +15,7 @@ Here you can see my [demo](https://vov4ukz53.github.io/currency-converter-react/
 - Styled Components
 - React Hooks
 - Custom Hooks
+- Axios async/await
 
 ## Available Scripts
 
