@@ -26,8 +26,8 @@ export const Fieldset = styled.fieldset`
 
 export const Legend = styled.legend`
    font-size: 30px;
-    font-weight: 700;
-    color: ${({ theme }) => theme.colors.mainColor};
+   font-weight: 700;
+   color: ${({ theme }) => theme.colors.mainColor};
 
    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
       font-size: 24px;
