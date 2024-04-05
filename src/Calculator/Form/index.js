@@ -51,7 +51,7 @@ const Form = ({ calculateResult, clock }) => {
                      return <>
                         <Item>
                            <Content>
-                              Podaj kwote (zł)*:
+                              Podaj kwote (USD)*:
                            </Content>
                            <Input
                               active={amount.length !== 0}
@@ -73,7 +73,7 @@ const Form = ({ calculateResult, clock }) => {
                               value={selectedCurrency}
                               onChange={({ target }) => setSelectedCurrency(target.value)}
                            >
-                              {Object.keys(currenciesData.rates).map((currency) => (
+                              {Object.keys(currenciesData.data).map((currency) => (
                                  <option
                                     key={currency}
                                     value={currency}
@@ -89,7 +89,7 @@ const Form = ({ calculateResult, clock }) => {
                         <Paragraph info>
                            Aktualne na dzień:
                            <StyledStrong>
-                              {" "}{currenciesData.date}
+                              {" "}{currenciesData.meta.last_updated_at.toLocaleString().slice(0,10)}
                            </StyledStrong>
                         </Paragraph>
                         <Button

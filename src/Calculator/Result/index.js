@@ -5,12 +5,12 @@ const Result = ({ result, selectedRate }) => (
       {result !== undefined && (
          <>
             <ResultMain>
-               {result.inputAmount.toFixed(2)} PLN =
+               {result.inputAmount.toFixed(2)} USD =
                {" "}{result.outputAmount.toFixed(2)}
                {" "}{result.selectedCurrency.toUpperCase()}
             </ResultMain>
             <ResultInfo>
-               1 PLN =
+               1 USD =
                <Rate>
                   {" "}{selectedRate(result.selectedCurrency).toFixed(2)}
                   {" "}{result.selectedCurrency.toUpperCase()}
